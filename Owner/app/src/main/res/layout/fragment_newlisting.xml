@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<ProgressBar
+    android:id="@+id/NewListingProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="600dp"
+    android:visibility="gone"
+    />
+
+
+    <LinearLayout
+        android:id="@+id/newListingScreen"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NewListingFragment"
+        >
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/uploadImages_ViewPager_newlisting_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginVertical="16dp"
+            android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+            style="@style/uploadImageStyle"
+           />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Title"
+            app:counterEnabled="true"
+            app:counterMaxLength="56"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+            android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInput_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="56"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Address"
+            app:counterEnabled="true"
+            app:counterMaxLength="56"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInput_Address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="56"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_city"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_padding_size_small"
+                android:layout_marginEnd="@dimen/margin_padding_size_small"
+                android:hint="City"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout_price"
+                app:layout_constraintEnd_toStartOf="@id/textInputLayout_area"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInput_tcity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_area"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_padding_size_small"
+                android:layout_marginStart="@dimen/margin_padding_size_small"
+                android:hint="Area"
+                app:layout_constraintBottom_toTopOf="@+id/textInputLayout_occupants"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textInputLayout_city"
+                app:layout_constraintTop_toTopOf="parent"
+                app:suffixText="Sqft"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInput_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_price"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_size_small"
+                android:layout_marginEnd="@dimen/margin_padding_size_small"
+                android:hint="Price"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textInputLayout_occupants"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_city"
+                app:startIconDrawable="@drawable/ic_rupee"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInput_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout_occupants"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_size_small"
+                android:layout_marginStart="@dimen/margin_padding_size_small"
+                android:hint="Occupants"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/textInputLayout_price"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout_area"
+                app:startIconDrawable="@drawable/ic_people_24"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInput_occupants"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+            android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+            android:hint="Description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInput_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facilities"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+            android:layout_marginBottom="0dp"
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarSize="0dp"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+            android:layout_marginTop="0dp"
+            >
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_facilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_AC"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="AC"
+                    android:layout_marginEnd="1dp"
+                    app:checkedIconEnabled="true"
+
+                    app:chipIcon="@drawable/ic_facility_ac"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_Wifi"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="WiFi"
+                    app:checkedIconEnabled="true"
+                    android:layout_marginEnd="1dp"
+                    app:chipIcon="@drawable/ic_facility_wifi"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_waterPurifier"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Water Purifier"
+                    app:checkedIconEnabled="true"
+                    android:layout_marginEnd="1dp"
+                    app:chipIcon="@drawable/ic_facility_water_purifier"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_washingMachine"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Washing Machine"
+                    app:checkedIconEnabled="true"
+                    android:layout_marginEnd="1dp"
+                    app:chipIcon="@drawable/ic_facility_water_purifier"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_cleaning"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Cleaning"
+                    app:checkedIconEnabled="true"
+                    android:layout_marginEnd="1dp"
+                    app:chipIcon="@drawable/ic_facility_water_purifier"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_desk"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Desk"
+                    app:checkedIconEnabled="true"
+                    android:layout_marginEnd="1dp"
+                    app:chipIcon="@drawable/ic_facility_water_purifier"
+                  />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+            android:layout_marginBottom="0dp"
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_ListingType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/margin_padding_size_small"
+                android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+                app:singleSelection="true"
+
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_Pg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:checkedIconEnabled="true"
+                    android:text="PG"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_Hostel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:checkedIconEnabled="true"
+                    android:text="Hostel"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_GuestHouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:checkedIconEnabled="true"
+                    android:text="Guest House"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BHK"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginVertical="@dimen/margin_padding_size_small"
+android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+            android:layout_marginBottom="0dp"
+            />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup_ListingBhk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/margin_padding_size_small"
+                android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_1Rk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1Rk"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_1Bhk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="1BHk"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_2Bhk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="2BHK"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_3Bhk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:text="3BHK"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_4PlusBhk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4+BHK"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSubmitNewListing"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        style="@style/buttonBlue"
+        android:text="SUBMIT"
+        android:layout_gravity="right"
+        android:layout_marginVertical="@dimen/margin_padding_size_small"
+        android:layout_marginHorizontal="@dimen/margin_padding_size_medium"
+
+        android:elevation="5dp"
+        />
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>
+</layout>

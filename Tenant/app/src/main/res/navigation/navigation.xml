@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listingsHomeFragment">
+
+
+    <fragment
+        android:id="@+id/listingsHomeFragment"
+        android:name="com.phics23.tenant.ui.listingsHome.ListingsHomeFragment"
+        android:label="ListingsHomeFragment"
+        tools:layout="@layout/fragment_listings_home"
+        >
+        <action
+            android:id="@+id/action_listingsHomeFragment_to_listingDetailFragment"
+            app:destination="@id/listingDetailFragment" />
+        <action
+            android:id="@+id/action_listingsHomeFragment_to_listingsHomeFilter"
+            app:destination="@id/listingsHomeFilter" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/listingsHomeFilter"
+        android:name="com.phics23.tenant.ui.listingsHome.ListingFilterListDialogFragment"
+        android:label="listingsHomeFilter"
+        tools:layout="@layout/fragment_listings_home_listingsfilter_bottomsheet"
+
+        />
+
+
+    <fragment
+        android:id="@+id/listingDetailFragment"
+        android:name="com.phics23.tenant.ui.ListingDetail.ListingDetailFragment"
+        android:label="ListingDetailFragment"
+        tools:layout="@layout/fragment_listing_detail"
+        >
+        <action
+            android:id="@+id/action_listingDetailFragment_to_listingsHomeFragment"
+            app:destination="@id/listingsHomeFragment" />
+        <action
+            android:id="@+id/action_listingDetailFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <argument
+            android:name="listing"
+            app:argType="com.phics23.tenant.data.model.listing.Listing" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBookingFragment"
+        android:name="com.phics23.tenant.ui.MyBooking.MyBookingFragment"
+        android:label="MyBookingFragment"
+        tools:layout="@layout/fragment_mybooking"
+        >
+        <action
+            android:id="@+id/action_myBookingFragment_to_listingsHomeFragment"
+            app:destination="@id/listingsHomeFragment" />
+        <action
+            android:id="@+id/action_myBookingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <action
+            android:id="@+id/action_myBookingFragment_to_listingDetailFragment"
+            app:destination="@id/listingDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.phics23.tenant.ui.payment.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment"
+        >
+        <action
+            android:id="@+id/action_paymentFragment_to_listingDetailFragment"
+            app:destination="@id/listingDetailFragment" />
+        <argument
+            android:name="listing"
+            app:argType="com.phics23.tenant.data.model.listing.Listing" />
+        <argument
+            android:name="Payment"
+            app:argType="com.phics23.tenant.data.model.payments.Payment"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_paymentFragment_to_myBookingFragment"
+            app:destination="@id/myBookingFragment" />
+    </fragment>
+    <!-->paymentFragment instead of account<-->
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.phics23.tenant.ui.AccountFragment"
+        android:label="fragment_item_list_dialog_list_dialog"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_authActivity"
+            app:destination="@id/authActivity"
+            app:popUpTo="@id/authActivity"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <activity
+        android:id="@+id/authActivity"
+        android:name="com.phics23.tenant.ui.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+</navigation>

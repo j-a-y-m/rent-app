@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:id="@+id/addReviewTitle"
+        style="@style/listingDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-20dp"
+        android:text="Add Review"
+        android:visibility="visible"
+        />
+
+    <TextView
+        android:layout_alignParentStart="true"
+        android:id="@+id/addedRating_textview_layout_myBooking_addReview"
+        style="@style/listingDetailTitle"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.0"
+        android:visibility="gone"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/ratingBarBig"
+        android:layout_below="@id/addReviewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:layout_toEndOf="@id/addedRating_textview_layout_myBooking_addReview"
+        android:layout_alignLeft="@id/addedRating_textview_layout_myBooking_addReview"
+        android:isIndicator="false"
+        android:rating="0.0" />
+<!--    app:helperText="Write anonymous review(optional)"-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addReview_textInputLayout_layout_myBooking_addReview"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ratingBar"
+        android:hint="Review"
+        app:helperTextEnabled="false"
+
+        android:layout_marginHorizontal="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addReview_editText_layout_myBooking_addReview"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addReview_Button_layout_myBooking_addReview"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/addReview_textInputLayout_layout_myBooking_addReview"
+
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        style="@style/buttonBlue"
+        android:textSize="12sp"
+        android:text="POST REVIEW"
+        android:visibility="visible"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/addedReview_textview_layout_myBooking_addReview"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/addedRating_textview_layout_myBooking_addReview"
+        android:text="vdevdtedtedvetdvetdvedtvedtevdtedvetdvtedvetdvetdvetdvetdvetdvetdvetdevtdvedtevdtevdtevdetdvetyfrfyrfyrfrfhyrfhryfhryfhryfhrfyrfhryfhryfhryfryfhryfhryfhryfhrfyrhfyhfyrfhyrhfyrfyrfhryfhryfryf"
+        android:layout_marginHorizontal="20dp"
+        android:visibility="gone"
+        />
+</RelativeLayout>

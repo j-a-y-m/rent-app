@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/MyListingsFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.phics23.owner.ui.MainActivity"
+        android:label="MainActivity"
+        />
+    <fragment
+        android:id="@+id/MyListingsFragment"
+        android:name="com.phics23.owner.ui.mylistings.MyListingsFragment"
+        android:label="MyListingsFragment"
+        tools:layout="@layout/fragment_mylistings"
+        >
+        <action
+            android:id="@+id/action_MyListingsFragment_to_myListingManagementFragment"
+            app:destination="@id/myListingManagementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewListingFragment"
+        android:name="com.phics23.owner.ui.NewListingFragment"
+        android:label="NewListingFragment"
+        tools:layout="@layout/fragment_newlisting"
+        >
+        <action
+            android:id="@+id/action_NewListingFragment_to_MyListingsFragment"
+            app:destination="@id/MyListingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AccountFragment"
+        android:name="com.phics23.owner.ui.AccountFragment"
+        android:label="AccountFragment"
+        tools:layout="@layout/fragment_account"
+        >
+        <action
+            android:id="@+id/action_AccountFragment_to_authActivity"
+            app:destination="@id/authActivity"
+            app:popUpTo="@id/authActivity"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/myListingManagementFragment"
+        android:name="com.phics23.owner.ui.myListingManagement.MyListingManagementFragment"
+        android:label="myListingManagement"
+        tools:layout="@layout/fragment_mylisting_management"
+        >
+        <action
+            android:id="@+id/action_myListingManagementFragment_to_tenantDetailFragment"
+            app:destination="@id/tenantBookingDetailsFragment" />
+        <argument
+            android:name="listing"
+            app:argType="com.phics23.owner.data.model.listing.Listing" />
+        <action
+            android:id="@+id/action_myListingManagementFragment_to_myListingDetail"
+            app:destination="@id/myListingDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/tenantBookingDetailsFragment"
+        android:name="com.phics23.owner.ui.tenantBookingDetails.TenantBookingDetailsFragment"
+        android:label="tenantBookingDetailsFragment"
+        tools:layout="@layout/fragment_tenant_details"
+        >
+        <argument
+            android:name="tenant"
+            app:argType="com.phics23.owner.data.model.Tenant" />
+        <action
+            android:id="@+id/action_tenantBookingDetailsFragment_to_dialogCheckoutRequestMessage"
+            app:destination="@id/dialogCheckoutRequestMessage" />
+        <action
+            android:id="@+id/action_tenantBookingDetailsFragment_to_reportTenantDialog"
+            app:destination="@id/reportTenantDialog" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/dialogCheckoutRequestMessage"
+        android:name="com.phics23.owner.ui.tenantBookingDetails.CheckoutRequestDialog"
+        android:label="dialogCheckoutRequestMessage"
+        tools:layout="@layout/dialog_checkout_request_tenant_details"
+        >
+        <argument
+            android:name="tenantId"
+            app:argType="string" />
+    </dialog>
+
+
+    <fragment
+        android:id="@+id/myListingDetail"
+        android:name="com.phics23.owner.ui.myListingdetail.MyListingDetailFragment"
+        android:label="MyListingDetail"
+        tools:layout="@layout/fragment_my_listing_detail"
+        >
+        <argument
+            android:name="listing"
+            app:argType="com.phics23.owner.data.model.listing.Listing" />
+    </fragment>
+    <activity
+        android:id="@+id/authActivity"
+        android:name="com.phics23.owner.ui.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+    <dialog
+        android:id="@+id/reportTenantDialog"
+        android:name="com.phics23.owner.ui.tenantBookingDetails.ReportTenantDialog"
+        android:label="ReportTenantDialog"
+        tools:layout="@layout/dialog_report_tenant_details"
+        >
+        <argument
+            android:name="tenantId"
+            app:argType="string" />
+    </dialog>
+    <!--fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.phics23.tenant.PaymentFragment"
+        android:label="PaymentFragment" /-->
+    <!-->paymentFragment instead of account<-->
+    <!--fragment
+        android:id="@+id/listingFilterListDialogFragment"
+        android:name="com.phics23.tenant.ui.ListingsHome.ListingFilterListDialogFragment"
+        android:label="fragment_item_list_dialog_list_dialog"
+        tools:layout="@layout/fragment_item_list_dialog_list_dialog" /-->
+</navigation>

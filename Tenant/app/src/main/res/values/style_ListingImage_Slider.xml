@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="listingDetailImageViewPagerStyle">
+        <item name="android:layout_margin">7dp</item>
+
+
+    </style>
+
+    <style name="listingDetailImageViewPagerDotsStyle">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">-18dp</item>
+        <item name="dotsColor">@color/white</item>
+        <item name="dotsSize">8dp</item>
+        <item name="selectedDotColor">#7A7A7A</item>
+    </style>
+
+</resources>

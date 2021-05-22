@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097973716691",
+    "project_id": "app-for-pg-hostel-rental",
+    "storage_bucket": "app-for-pg-hostel-rental.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097973716691:android:624042a36049e6401b2626",
+        "android_client_info": {
+          "package_name": "com.phics23.owner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097973716691-ci845ouqe53thb2jicgvofoes08i5sco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUUyyTPJiH0URKQdZ2Bjnm_5VKLUcEZ2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097973716691-ci845ouqe53thb2jicgvofoes08i5sco.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

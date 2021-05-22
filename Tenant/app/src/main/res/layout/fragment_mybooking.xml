@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listing"
+            type="com.phics23.tenant.data.model.listing.Listing" />
+        <variable
+            name="payment"
+            type="com.phics23.tenant.data.model.payments.Payment" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/myBookingProgressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        tools:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/viewNoBooking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:src="@drawable/ic_booking_notfound"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No booking found"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/error"
+        layout="@layout/layout_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <RelativeLayout
+        android:id="@+id/viewContentMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:context=".ui.MyBookingFragment"
+        tools:visibility="visible"
+        >
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <!-->include booked listing cardview<-->
+                <include
+                    android:id="@+id/bookedListing_cardview_myBooking_fragment"
+                    layout="@layout/layout_mybooking_bookedlistingcard"
+                    app:listing="@{listing}"
+                    />
+
+                <!-->payments due recycler cardview<-->
+                <include
+                    android:id="@+id/paymentsdue_view_mybooking_fragment"
+                    layout="@layout/layout_mybooking_paymentsdue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bookedListing_cardview_myBooking_fragment"
+                    />
+                <!-->previous payments recycler cardview<-->
+
+                <include
+                    android:id="@+id/previouspayments_view_mybooking_fragment"
+                    layout="@layout/layout_mybooking_previouspayments"
+                    android:layout_width="match_parent"
+
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@id/paymentsdue_view_mybooking_fragment"
+                    android:layout_marginTop="3dp"
+                    />
+
+                <!-- TODO: Update blank fragment layout -->
+                <TextView
+                    android:id="@+id/payments"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_below="@id/bookedListing_cardview_myBooking_fragment"
+                    android:text="@string/hello_blank_fragment"
+                    />
+
+
+                <!-->include addreview above buttons<-->
+                <include
+                    android:id="@+id/addReview_view_mybooking_fragment"
+                    layout="@layout/layout_mybooking_addreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/previouspayments_view_mybooking_fragment"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/contactOwnerButton"
+                    style="@style/buttonGrey"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addReview_view_mybooking_fragment"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="CONTACT OWNER"
+                    android:textSize="12sp"
+                    />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancelBooking_button_myBooking_fragment"
+                    style="@style/buttonRed"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addReview_view_mybooking_fragment"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="CANCEL BOOKING"
+                    android:textSize="12sp"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payRent_button_myBooking_fragment"
+            style="@style/buttonBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="PAY RENT"
+            />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
+

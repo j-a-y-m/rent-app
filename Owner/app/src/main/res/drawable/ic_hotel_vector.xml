@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="175.9586"
+    android:viewportHeight="198.7836"
+    android:width="623.4754dp"
+    android:height="704.3513dp">
+    <group
+        android:translateX="-12.45775"
+        android:translateY="-29.49898">
+        <group
+            android:scaleX="5.614943"
+            android:scaleY="5.596232"
+            android:translateX="33.05775"
+            android:translateY="73.37299">
+            <path
+                android:pathData="M7 13c1.66 0 3 -1.34 3 -3C10 8.34 8.66 7 7 7 5.34 7 4 8.34 4 10c0 1.66 1.34 3 3 3zM19 7h-8v7H3V5H1v15h2v-3h18v3h2V11C23 8.79 21.21 7 19 7Z"
+                android:fillColor="#FFFFFF" />
+        </group>
+        <group
+            android:scaleX="0.2645833"
+            android:scaleY="0.2645833">
+            <path
+                android:pathData="M479.41992 189.35156a80.138942 81.730529 87.369101 0 0 -80.67773 69.31446 80.138942 81.730529 87.369101 0 0 69.77148 90.23437 80.138942 81.730529 87.369101 0 0 92.14453 -68.58203 80.138942 81.730529 87.369101 0 0 -69.77148 -90.23242 80.138942 81.730529 87.369101 0 0 -11.4668 -0.73438zm0.16797 36.83594a13.463837 13.586193 0 0 1 0.002 0 13.463837 13.586193 0 0 1 0.21485 0 13.463837 13.586193 0 0 1 13.46289 13.58594 13.463837 13.586193 0 0 1 -13.46289 13.58594 13.463837 13.586193 0 0 1 -13.46485 -13.58594 13.463837 13.586193 0 0 1 13.24805 -13.58594zm-11.38281 32.53711h23.31836v53.11914h-23.31836z"
+                android:fillColor="#FFFFFF" />
+        </group>
+        <path
+            android:pathData="M131.215 63.51312A4.139455 3.931752 0 0 1 122.9361 63.51312A4.139455 3.931752 0 0 1 131.215 63.51312Z"
+            android:fillColor="#000000"
+            android:fillAlpha="0.000560925" />
+        <path
+            android:pathData="M115.1816 67.41826A0.01860836 0.01216785 0 0 1 115.1444 67.41826A0.01860836 0.01216785 0 0 1 115.1816 67.41826Z"
+            android:fillColor="#000000" />
+    </group>
+</vector>

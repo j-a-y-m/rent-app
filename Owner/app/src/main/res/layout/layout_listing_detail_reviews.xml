@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"-->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="rating"
+            type="Float"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+
+            android:id="@+id/rating"
+            style="@style/listingDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:setRating="@{rating}"
+            tools:text="4.5"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <RatingBar
+            style="@style/ratingBarBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:isIndicator="true"
+            app:setRating="@{rating}"
+            app:layout_constraintStart_toEndOf="@+id/rating"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rating"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_review_listing_detail"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+<!--/LinearLayout-->

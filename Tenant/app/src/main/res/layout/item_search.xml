@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView android:id="@+id/textview_searchItemCity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="3dp"
+    android:text="City Name"
+    style="@style/listingDetailText"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

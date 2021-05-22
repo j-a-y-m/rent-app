@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+          android:id="@+id/MyListingsFragment"
+          android:title="My Listings"
+          android:icon="@drawable/ic_listings_24"
+
+        />
+    <item
+        android:id="@+id/NewListingFragment"
+        android:title="New Listing"
+        android:icon="@drawable/ic_newlisting_24"
+        />
+    <item
+        android:id="@+id/AccountFragment"
+        android:title="Account"
+        android:icon="@drawable/ic_account_circle_24"
+        />
+</menu>

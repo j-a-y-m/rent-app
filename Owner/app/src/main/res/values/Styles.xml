@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="listingDetailTitle" parent="style_margin">
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="listingDetailText" parent="style_margin">
+
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
+    <style name="ratingBarBig" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:progressTint">@android:color/holo_orange_light</item>
+        <item name="android:secondaryProgressTint">@android:color/holo_orange_light</item>
+        <item name="android:scaleX">0.7</item>
+        <item name="android:scaleY">0.7</item>
+
+    </style>
+    <style name="ratingBarSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:numStars">5</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:layout_marginStart">@dimen/margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/margin_end</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:progressTint">@android:color/holo_orange_light</item>
+        <item name="android:secondaryProgressTint">@android:color/holo_orange_light</item>
+    </style>
+
+
+    <style name="searchBarText" parent="" >
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="buttonBlue" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/materialButtonGray</item>
+        <item name="android:textColor">@color/materialBlue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="buttonRed" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/materialButtonGray</item>
+        <item name="android:textColor">@color/materialRed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="buttonGrey" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/materialButtonGray</item>
+        <item name="android:textColor">@color/materialGrayDarkText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="uploadImageStyle">
+        <item name="strokeWidth">4dp</item>
+        <item name="strokeColor">@color/gray</item>
+    </style>
+    <style name="uploadImageTextViewButton">
+<!--        <item name="android:paddingTop">160dp</item>-->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+
+    </style>
+
+    <style name="listingDetailImageViewPagerDotsStyle">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">-18dp</item>
+        <item name="dotsColor">@color/white</item>
+        <item name="dotsSize">8dp</item>
+        <item name="selectedDotColor">#7A7A7A</item>
+    </style>
+
+    <style name="uploadImageDotsStyle">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">-18dp</item>
+        <item name="dotsColor">@color/white</item>
+        <item name="dotsSize">8dp</item>
+        <item name="selectedDotColor">#7A7A7A</item>
+    </style>
+
+
+</resources>

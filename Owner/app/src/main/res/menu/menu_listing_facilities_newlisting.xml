@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/listing_facility_ac"
+        android:title="AC"
+        android:icon="@drawable/ic_facility_ac"
+        />
+    <item android:id="@+id/listing_facility_wifi"
+        android:title="WiFi"
+        android:icon="@drawable/ic_facility_wifi"
+        />
+    <item android:id="@+id/listing_facility_waterPurifier"
+        android:title="Water Purifier"
+        android:icon="@drawable/ic_facility_water_purifier"
+        />
+    <item android:id="@+id/listing_facility_washingMachine"
+        android:title="Washing Machine"
+        android:icon="@drawable/ic_facility_washing_machine"
+        />
+    <item android:id="@+id/listing_facility_cleaning"
+        android:title="Cleaning"
+        android:icon="@drawable/ic_facility_maid"
+        />
+    <item android:id="@+id/listing_facility_desk"
+        android:title="Desk"
+        android:icon="@drawable/ic_facility_desk"
+        />
+</menu>

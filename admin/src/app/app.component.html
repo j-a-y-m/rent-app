@@ -1,0 +1,25 @@
+
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+
+<ng-template #showLogin>
+  <firebase-ui id="showLogin"></firebase-ui>
+</ng-template>
+
+
+
+<app-nav></app-nav>
+
+<div *ngIf="auth.user | async as user; else showLogin">
+
+
+  <router-outlet>
+  </router-outlet>
+
+
+</div>
+
+<!-- <app-search>
+
+</app-search> -->
+
+<!-- <app-listings></app-listings> -->

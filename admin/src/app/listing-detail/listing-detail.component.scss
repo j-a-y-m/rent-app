@@ -1,0 +1,57 @@
+
+.listing-detail-card
+{
+  height: 600px;
+  position: sticky;
+  top: 30px;
+  overflow: auto;
+}
+
+.detailCardContainer
+{
+  display: grid;
+}
+
+.listing-item-img
+{
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.listingDetailTitle, dt
+{
+  font-weight: bold;
+}
+
+.price
+{
+    display: grid;
+    align-items: end;
+    position: relative;
+
+}
+
+mat-card-content
+{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+dt
+{
+  margin-right: 3px;
+  display: inline;
+}
+
+dd
+{
+  margin-right: 6px;
+  display: inline;
+}
+
+button
+{
+  margin: 8px;
+}

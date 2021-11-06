@@ -1,0 +1,60 @@
+<mat-card class="listing-detail-card m-2">
+  <div class="detailCardContainer">
+
+    <div id="listingDetailImagecarousel" class="carousel slide" >
+      <div class="carousel-inner">
+        <div class="carousel-item " *ngFor="let imgitem of listingDetail.listingImages; let i = index" [class.active]="i==0">
+          <img src={{imgitem}} class="listing-item-img  " alt="...">
+        </div>
+
+    </div>
+      <a class="carousel-control-prev" href="#listingDetailImagecarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#listingDetailImagecarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+<!--  <img mat-card-image src={{listingDetail.img}} alt="Pic" class="listing-item-img">-->
+  <mat-card-header>
+
+    <mat-card-title>{{listingDetail.title}}</mat-card-title>
+    <h2>₹{{listingDetail.price}}</h2>
+    <mat-card-subtitle>{{listingDetail.address}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <h3 class="listingDetailTitle">Description</h3>
+    <p>
+      {{listingDetail.description}}
+    </p>
+    <div>
+      <dl>
+        <dt>City:</dt>
+        <dd>{{listingDetail.city}}</dd>
+        <dt>Area</dt>
+        <dd>{{listingDetail.area}}Sqft</dd>
+        <dt>Occupants:</dt>
+        <dd>{{listingDetail.occupants}}</dd>
+        <dt>Type:</dt>
+        <dd>{{listingDetail.type}}</dd>
+        <dt>Bhk:</dt>
+        <dd>{{listingDetail.bhk}}</dd>
+      </dl>
+      <dl>
+      <dt>Facilities:</dt>
+      <dd *ngFor="let facility of listingDetail.facilities ">{{facility}}</dd>
+      </dl>
+      <button mat-raised-button color="basic" (click)="performAction(listingDetail,actions.REJECT)">Reject</button>
+      <button mat-raised-button color="primary" (click)="performAction(listingDetail,actions.APPROVE)" >Approve</button>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+
+  </mat-card-actions>
+  </div>
+</mat-card>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "app-for-pg-hostel-rental": {
+      "hosting": {
+        "rent-app": [
+          "app-for-pg-hostel-rental"
+        ]
+      }
+    }
+  }
+}

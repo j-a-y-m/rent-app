@@ -1,0 +1,20 @@
+<div class="row listingsContainer">
+<!-- material grid -->
+<div class="listings col-lg-auto" [ngStyle]="state.listingsStyle" >
+    <mat-grid-list [cols]="state.cols">
+        <mat-grid-tile *ngFor='let listing of listingRequests | async '  class="grid">
+            <app-listing-item [listingItem]="listing"  (click)="click(listing)" ></app-listing-item>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+
+</div>
+
+<div class=" col"  [ngStyle]="state.listingDetailStyle">
+
+  <app-listing-detail class="listingDetail"  [listingDetail]="selectedListingRequest"  (listingAction)="performAction($event)">
+  </app-listing-detail>
+</div>
+
+</div>

@@ -1,0 +1,32 @@
+.listing-card {
+    max-width: 350px;
+    max-height: 500px;
+    position: relative;
+    margin: 1%;
+  }
+
+.listing-item-img
+{   height: 200px;
+    width: available;
+    object-fit: cover;
+}
+
+.listing-card mat-card-content p
+{
+
+    max-width: 350px;
+    text-align: justify;
+    display: block;
+    max-height: 100%;
+    position: relative;
+}
+
+p
+{
+    max-width: inherit;
+}
+
+
+
+
+
